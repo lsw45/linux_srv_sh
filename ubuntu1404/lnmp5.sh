@@ -17,6 +17,16 @@ mkdir -p /home/ly/nginx_config;
 sed -i '/include\s\/etc\/nginx\/sites-enabled\/\*;/a    include /home/ly/nginx_config/*;' /etc/nginx/nginx.conf
 mkdir -p /home/ly/www;
 
+# 日志
+mkdir /home/ly/log;
+mkdir /home/ly/log/nginx;
+touch /home/ly/log/nginx/access.log;
+touch /home/ly/log/nginx/error.log;
+
+# 权限
+chown -R www-data:www-data /home/ly/log/
+chown -R www-data:www-data /home/ly/www/
+
 # php-fpm config
 #sudo sed -i -e "s/;cgi.fix_pathinfo=0/cgi.fix_pathinfo=1/g" /etc/php5/fpm/php.ini
 
