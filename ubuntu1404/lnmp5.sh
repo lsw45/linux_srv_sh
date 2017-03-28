@@ -6,7 +6,7 @@
 
 # Requirements
 apt-get update
-apt-get -y install vim curl zip git git-core mailutils nginx php5 php5-fpm php5-curl php5-gd php5-mysql mysql-server
+apt-get -y install vim curl zip unzip git git-core mailutils nginx php5 php5-fpm php5-curl php5-gd php5-mysql php5-dev mysql-server
 
 
 # nginx config
