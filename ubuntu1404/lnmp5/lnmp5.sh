@@ -17,6 +17,9 @@ mkdir -p /home/ly/nginx_config;
 sed -i '/include\s\/etc\/nginx\/sites-enabled\/\*;/a    include /home/ly/nginx_config/*;' /etc/nginx/nginx.conf
 mkdir -p /home/ly/www;
 
+# 拷贝默认站点配置文件至/home/ly/nginx_config
+cp ./mysite.conf  /home/ly/nginx_config
+
 # 日志
 mkdir /home/ly/log;
 mkdir /home/ly/log/nginx;
